@@ -13,6 +13,10 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 
+filename = 'kidney-prediction-rfc-model.pkl'
+classifier = pickle.load(open(filename, 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
+model1 = pickle.load(open('model1.pkl', 'rb'))
 
 
 
