@@ -12,3 +12,26 @@ import pickle
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
+
+
+
+
+
+@app.route('/')
+def index():
+    return render_template("index.html")
+
+
+@app.route('/about')
+def about():
+    return render_template("about.html")
+
+
+@app.route('/help')
+def help():
+    return render_template("help.html")
+
+
+@app.route('/terms')
+def terms():
+    return render_template("tc.html")
