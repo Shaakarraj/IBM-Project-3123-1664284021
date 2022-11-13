@@ -62,3 +62,20 @@ def signup():
 
         return redirect("/login")
     return render_template('signup.html', form=form)
+
+
+@app.route("/dashboard")
+@login_required
+def dashboard():
+    return render_template("dashboard.html")
+
+
+@app.route("/disindex")
+
+def disindex():
+    return render_template("disindex.html")
+
+@app.route("/kidney")
+@login_required
+def kidney():
+    return render_template("kidney.html")
