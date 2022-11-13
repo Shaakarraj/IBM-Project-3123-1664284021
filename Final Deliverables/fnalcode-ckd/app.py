@@ -102,3 +102,9 @@ def predictkidney():
     else:
         prediction = "Patient has a low risk of Kidney Disease"
     return render_template("kidney_result.html", prediction_text=prediction)
+
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
